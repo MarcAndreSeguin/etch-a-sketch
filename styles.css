@@ -1,0 +1,20 @@
+body {
+  display: flex; /* makes everything centered */
+  flex-direction: column; /* stacks elements vertically */
+  align-items: center; /* centers horizontally */
+  background: #f4f4f4; /* light grey background */
+  font-family: Arial, sans-serif; /* clean font */
+}
+
+#container {
+  display: flex; /* use flexbox */
+  flex-wrap: wrap; /* allow squares to wrap to next line */
+  width: 960px; /* total container width */
+  height: 960px; /* total container height */
+  border: 2px solid #333;
+}
+
+.singleSquare {
+  border: 1px solid #13de2e;
+  box-sizing: border-box;
+}
