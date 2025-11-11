@@ -2,19 +2,26 @@ body {
   display: flex; /* makes everything centered */
   flex-direction: column; /* stacks elements vertically */
   align-items: center; /* centers horizontally */
-  background: #f4f4f4; /* light grey background */
+  background: #000000; /* light grey background */
   font-family: Arial, sans-serif; /* clean font */
 }
+
+h1 {
+    color: whitesmoke
+}
+
 
 #container {
   display: flex; /* use flexbox */
   flex-wrap: wrap; /* allow squares to wrap to next line */
   width: 960px; /* total container width */
   height: 960px; /* total container height */
-  border: 2px solid #333;
+  border: 10px dashed #dc0e0e;
+  padding: 1px;
+  background-color: #e8e4e4df;
 }
 
 .singleSquare {
-  border: 1px solid #13de2e;
+  border: 1px solid rgba(190, 186, 179, 0.877);
   box-sizing: border-box;
 }
