@@ -2,6 +2,10 @@ const container = document.querySelector("#container");
 const resetBtn = document.querySelector("#resetBtn");
 const clearBtn = document.querySelector("#clearBtn");
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 function createGrid(size) {
   container.innerHTML = "";
   const squareSize = 960 / size;
@@ -11,6 +15,8 @@ function createGrid(size) {
     newSquare.classList.add("singleSquare");
     newSquare.style.width = `${squareSize}px`;
     newSquare.style.height = `${squareSize}px`;
+    newSquare.addEventListener('mouseover', drawBW)
+    newSquare.addEventListener('mousedown', drawBW)
     container.appendChild(newSquare);
   }
 }
@@ -29,3 +35,8 @@ resetBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
     createGrid(16);
 });
+
+function drawBW(e) {
+  if (e.type === 'mouseover' && !mouseDown) return
+  e.target.style.backgroundColor = '#000000'
+}
