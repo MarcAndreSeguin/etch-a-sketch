@@ -18,10 +18,10 @@ h1 {
   height: 960px; /* total container height */
   border: 10px dashed #dc0e0e;
   padding: 1px;
-  background-color: #e8e4e4df;
+  background-color: rgb(232, 228, 228);
 }
 
 .singleSquare {
-  border: 1px solid rgba(190, 186, 179, 0.877);
+  border: 1px solid rgba(190, 186, 179, 0.902);
   box-sizing: border-box;
 }
